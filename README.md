@@ -93,7 +93,7 @@ pnpm install
 
 1. Go to [Spotify Developer Dashboard](https://developer.spotify.com/dashboard)
 2. Create a new app
-3. Add redirect URI: `http://localhost:5173/callback`
+3. Add redirect URI: `http://127.0.0.1:5173/callback`
 4. Copy your Client ID and Client Secret
 
 ### 4. Environment Configuration
@@ -102,7 +102,7 @@ Create `.env` file in `apps/server/`:
 ```env
 SPOTIFY_CLIENT_ID=your_client_id
 SPOTIFY_CLIENT_SECRET=your_client_secret
-SPOTIFY_REDIRECT_URI=http://localhost:5173/callback
+SPOTIFY_REDIRECT_URI=http://127.0.0.1:5173/callback
 SESSION_SECRET=your_session_secret
 PORT=3001
 ```
