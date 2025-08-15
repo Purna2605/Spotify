@@ -1,0 +1,23 @@
+{
+  "name": "spotify-web-player-clone",
+  "version": "1.0.0",
+  "description": "A complete Spotify Web Player Clone with React frontend and Node.js backend",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:web": "pnpm --filter web dev",
+    "dev:server": "pnpm --filter server dev",
+    "dev": "concurrently -n web,server -c auto \"pnpm dev:web\" \"pnpm dev:server\"",
+    "build": "pnpm --filter web build && pnpm --filter server build",
+    "clean": "pnpm --filter web clean && pnpm --filter server clean"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}
